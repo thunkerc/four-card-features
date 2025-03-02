@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Primary Colors */
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-size: 15px;
+  background-color: var(--white);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.primary-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.grid-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  width: 100%;
+  height: 280px;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 1px 20px 24px 14px rgba(0, 0, 0, 0.09);
+  position: relative;
+}
+
+.icon-img {
+  position: absolute;
+  top: 11.2rem;
+  right: 4rem;
+}
+
+.card-1 {
+  grid-column: span 1;
+  grid-row: span 2;
+  border-top: 4px solid var(--cyan);
+}
+
+.card-2 {
+  grid-column: span 1;
+  border-top: 4px solid var(--red);
+}
+
+.card-3 {
+  grid-column: span 1;
+  grid-row: span 2;
+  border-top: 4px solid var(--blue);
+}
+
+.card-4 {
+  grid-column: span 1;
+  border-top: 4px solid var(--orange);
+}
+
+@media screen and (max-width: 868px) {
+  .grid-item {
+    grid-template-columns: 1fr;
+  }
+
+  .card-1 {
+    grid-row: span 1;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
